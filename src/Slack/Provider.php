@@ -23,6 +23,13 @@ class Provider extends AbstractProvider
         return $this;
     }
 
+    public function setUserScopes(array $scopes)
+    {
+        $this->userScopes = $scopes;
+
+        return $this;
+    }
+
     public function botScopes($scopes)
     {
         $this->scopes = array_unique(array_merge($this->scopes, (array) $scopes));
